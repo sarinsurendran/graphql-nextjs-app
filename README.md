@@ -1,3 +1,17 @@
-# Awesome Links - part-1
+# Apollo GraphQL
 
-This branch has the same starting point as [this article](https://prisma.io/blog/fullstack-nextjs-graphql-prisma-oklidw1rhw)
+Install postgresql first
+
+Execute command "npm-install"  in project root directory
+
+create the database "graphql-nextjs-db-api" in PG Admin
+
+For importing schema run the command "npx prisma db push"
+
+Then for Seeding the data "npx prisma db seed"
+
+Run the app using "npm run dev" 
+
+http://localhost:3000/ will run the app frontend
+
+http://localhost:3000/api/graphql will open graphql studio and access queries

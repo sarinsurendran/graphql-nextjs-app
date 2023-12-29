@@ -33,6 +33,8 @@ export default function Home() {
       <h1>User List</h1>
       <div>
       <table>
+      {data.users.length > 0 ? (
+        <>
         <thead>
           <tr>
             <th>ID</th>
@@ -83,6 +85,14 @@ export default function Home() {
             </tr>
           ))}
         </tbody>
+        </>
+        ) : (
+          <tbody>
+            <tr>
+              <td colSpan="3"><p style={{'color':'red'}}>No Users available</p></td>
+            </tr>
+          </tbody>
+        )}
       </table>
       </div>
     </div>

@@ -4,16 +4,42 @@ import { addresses } from '../data/addresses';
 const prisma = new PrismaClient();
 
 async function main() {
-  await prisma.user.create({
+  const user1 = await prisma.user.create({
     data: {
       firstName: 'sarin',
       lastName: 'surendran',
-      email: 'test@gmail.com',
+      email: 'sarin@gmail.com',
+      addresses: {
+        create: [
+          {city: 'kannur', state : 'kerala' , country : 'India' },
+          {city: 'kochi', state : 'kerala' , country : 'India' },
+        ],
+      },
     },
   });
 
-  await prisma.address.createMany({
-    data: addresses,
+  const user2 = await prisma.user.create({
+    data: {
+      firstName: 'sayooj',
+      lastName: 'surendran',
+      email: 'sayooj@gmail.com',
+    },
+  });
+
+
+  const user3 = await prisma.user.create({
+    data: {
+      firstName: 'anoop',
+      lastName: 'sasi',
+      email: 'anoop@yahoo.com',
+      addresses: {
+        create: [
+          {city: 'kannur', state : 'kerala' , country : 'India' },
+          {city: 'kochi', state : 'kerala' , country : 'India' },
+          {city: 'bglr', state : 'krnd' , country : 'India' },
+        ],
+      },
+    },
   });
 }
 
