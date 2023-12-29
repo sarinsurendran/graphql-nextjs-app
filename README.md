@@ -2,6 +2,8 @@
 
 Install postgresql first
 
+postgres configuaration file in .env file
+
 Execute command "npm-install"  in project root directory
 
 create the database "graphql-nextjs-db-api" in PG Admin
